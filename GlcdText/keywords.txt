@@ -1,0 +1,23 @@
+#######################################
+# Syntax Coloring Map For GlcdText
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+GlcdText	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+setGlcd	KEYWORD2
+setFont	KEYWORD2
+setGraphicState	KEYWORD2
+printChar	KEYWORD2
+printString	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################

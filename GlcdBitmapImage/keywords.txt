@@ -1,0 +1,25 @@
+#############################################
+# Syntax Coloring Map For GlcdBitmapImage
+#############################################
+
+#############################################
+# Datatypes (KEYWORD1)
+#############################################
+
+GlcdBitmapImage	KEYWORD1
+
+#############################################
+# Methods and Functions (KEYWORD2)
+#############################################
+
+getInfo	KEYWORD2
+getWidth	KEYWORD2
+getHeight	KEYWORD2
+read	KEYWORD2
+getPixel	KEYWORD2
+readColumn	KEYWORD2
+readRow	KEYWORD2
+
+#############################################
+# Constants (LITERAL1)
+#############################################

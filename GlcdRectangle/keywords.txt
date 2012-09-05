@@ -1,0 +1,28 @@
+#############################################
+# Syntax Coloring Map For GlcdRectangle
+#############################################
+
+#############################################
+# Datatypes (KEYWORD1)
+#############################################
+
+GlcdRectangle	KEYWORD1
+
+#############################################
+# Methods and Functions (KEYWORD2)
+#############################################
+
+getArea	KEYWORD2
+getHeight	KEYWORD2
+getWidth	KEYWORD2
+getBottom	KEYWORD2
+getRight	KEYWORD2
+setRight	KEYWORD2
+getLeft	KEYWORD2
+setLeft	KEYWORD2
+getTop	KEYWORD2
+setTop	KEYWORD2
+
+#############################################
+# Constants (LITERAL1)
+#############################################
