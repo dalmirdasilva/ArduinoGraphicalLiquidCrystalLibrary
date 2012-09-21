@@ -19,8 +19,8 @@
  * 
  * 0x00, 0xww, 0xhh, 0xnn
  *  |     |     |     |___ Sequence count
- *  |     |     |_________ Character height (must be multiple by 8)
- *  |     |_______________ Character width
+ *  |     |     |_________ Character height (in bits)
+ *  |     |_______________ Character width (in bits)
  *  |_____________________ Into
  * </pre>
  * 
@@ -34,7 +34,7 @@
  * unsigned char offset[lsb];
  * </pre>
  * 
- * The sequence informations are followed one by another. Exaple:
+ * The sequence informations are followed one by another. Example:
  * Considering a font with 2 sequences, this could be the sequence bytes:
  * 
  * <pre>

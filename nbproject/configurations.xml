@@ -2,10 +2,6 @@
 <configurationDescriptor version="80">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df name="graphic" root=".">
-      <df name="doc">
-        <df name="html">
-        </df>
-      </df>
       <df name="GlcdBitmapFont">
         <df name="examples">
           <df name="font_dump">
