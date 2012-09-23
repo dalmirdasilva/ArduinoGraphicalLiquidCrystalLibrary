@@ -7,6 +7,8 @@
  * 
  * Glcd bitmap font is an array which represents the font glyph as a bitmap. 
  * 
+ * This font has fixed glyph size.
+ * 
  * The first bytes specify the font's information and glyph sequences; 
  * 
  * Header example:
@@ -119,8 +121,8 @@
  *         +-+-+-+-+-+-+
  *         |1|1|1|1|1|1| -> the MSB
  *         |1|1|1|1|1|1|
- *         |1|0|1|1|0|0|
- *         |1|0|1|1|0|0|
+ *         |0|0|1|1|0|0|
+ *         |0|0|1|1|0|0|
  *         |0|0|1|1|0|0|
  *         |0|0|1|1|0|0|
  *         |0|0|1|1|0|0|
