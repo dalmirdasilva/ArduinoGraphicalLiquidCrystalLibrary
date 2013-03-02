@@ -14,7 +14,7 @@ void setup() {
   glcd.init(Glcd::MODE_ON);
   glcd.screen(0xaa);
   delay(2000);
-  drawer.circle(100, 50, 5);
+  drawer.drawCircle(100, 50, 5);
   delay(2000);
   glcd.screen(0xff);
   delay(2000);

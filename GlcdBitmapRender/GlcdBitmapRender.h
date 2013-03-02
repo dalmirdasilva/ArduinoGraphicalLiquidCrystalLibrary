@@ -12,6 +12,7 @@
 #define __ARDUINO_LIBRARY_GLCD_BITMAP_DRAWER_H__ 1
 
 #include <Glcd.h>
+#include <GlcdPoint.h>
 #include <GlcdBitmapImage.h>
 
 class GlcdBitmapRender {

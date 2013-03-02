@@ -27,8 +27,11 @@ void dump_c(GlcdBitmapFont* font, char c) {
 }
 
 void setup() {
-  Serial.begin(9600);
   int seq;
+  Serial.begin(9600);
+  
+  Serial.println("Continue? (y?)");
+  while(Serial.read() != 'y');
   
   External24cl256Eeprom ee(0x50);
   ExternalEepromSeekableInputStream eeis(&ee);

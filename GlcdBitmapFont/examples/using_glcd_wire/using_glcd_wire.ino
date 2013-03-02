@@ -80,6 +80,9 @@ const unsigned char font[] = {
 void setup() {
   Serial.begin(9600);
   
+  Serial.println("It will erase the eeprom. (y?)");
+  while(Serial.read() != 'y');
+  
   External24cl256Eeprom e24cl256(0x01);
   ExternalMappedEeprom mappedEeprom(&e24cl256, 0, 482);
   

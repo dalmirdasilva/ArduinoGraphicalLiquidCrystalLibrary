@@ -12,6 +12,7 @@
 #define __ARDUINO_LIBRARY_GLCD_TEXT_LINE_H__ 1
 
 #include <Glcd.h>
+#include <GlcdText.h>
 #include <GlcdRectangle.h>
 #include <GlcdDrawer.h>
 
@@ -32,6 +33,7 @@ protected:
      * The y position.
      */
     unsigned char y;
+
 public:
 
     /**
@@ -48,7 +50,7 @@ public:
      * @param text                  The text to be printed.
      * @param count                 void
      */
-    void printLines(const unsigned char *text, int count);
+    void printLines(const unsigned char *text, unsigned char count);
 };
 
 #endif /* __ARDUINO_LIBRARY_GLCD_TEXT_LINE_H__ */

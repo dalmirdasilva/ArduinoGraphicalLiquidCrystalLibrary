@@ -162,7 +162,7 @@ public:
      * @return                          The number of printed chars.
      */
     inline unsigned char printString(unsigned char left, unsigned char top, unsigned char right, unsigned char bottom, const unsigned char *text, unsigned char count) {
-        printString(left, top, right, bottom, text, count, 1);
+        return printString(left, top, right, bottom, text, count, 1);
     }
     
     /**
@@ -177,7 +177,7 @@ public:
      * @return                          The number of printed characters.
      */
     inline unsigned char printString(GlcdRectangle *area, const unsigned char *text, unsigned char count, unsigned char size) {
-        printString(area->getLeft(), area->getTop(), area->getRight(), area->getBottom(), text, count, size);
+        return printString(area->getLeft(), area->getTop(), area->getRight(), area->getBottom(), text, count, size);
     }
     
     /**
@@ -191,7 +191,7 @@ public:
      * @return                          The number of printed characters.
      */
     inline unsigned char printString(GlcdRectangle *area, const unsigned char *text, unsigned char count) {
-        printString(area, text, count, 1);
+        return printString(area, text, count, 1);
     }
 };
 

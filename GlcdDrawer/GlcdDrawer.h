@@ -75,7 +75,7 @@ public:
      * @param x2                The y axis for the bottom of the rectangle.
      * @param y2                The y axis for the top of the rectangle.
      */
-    void line(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2);
+    void drawLine(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2);
     
     /**
      * Drawers a line in the glcd plane.
@@ -83,8 +83,8 @@ public:
      * @param p1                The point 1.
      * @param p2                The point 2.
      */
-    inline void line(GlcdPoint *p1, GlcdPoint *p2) {
-        line(p1->getX(), p1->getY(), p2->getX(), p2->getY());
+    inline void drawLine(GlcdPoint *p1, GlcdPoint *p2) {
+        drawLine(p1->getX(), p1->getY(), p2->getX(), p2->getY());
     }
 
     /**
@@ -95,15 +95,15 @@ public:
      * @param x2                The y axis for the bottom of the rectangle.
      * @param y2                The y axis for the top of the rectangle.
      */
-    void rect(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2);
+    void drawRectangle(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2);
     
     /**
      * Drawers a rectangle on the glcd plane.
      * 
      * @param r                 The rectangle.
      */
-    inline void rect(GlcdRectangle *r) {
-        rect(r->getLeft(), r->getTop(), r->getRight(), r->getBottom());
+    inline void drawRectangle(GlcdRectangle *r) {
+        drawRectangle(r->getLeft(), r->getTop(), r->getRight(), r->getBottom());
     }
 
     /**
@@ -113,7 +113,7 @@ public:
      * @param y                 The coordinate y.
      * @param radius            The radius.
      */
-    void circle(unsigned char x, unsigned char y, unsigned char radius);
+    void drawCircle(unsigned char x, unsigned char y, unsigned char radius);
     
     /**
      * Drawers a circle in the glcd plane.
@@ -121,8 +121,8 @@ public:
      * @param p
      * @param radius
      */
-    inline void circle(GlcdPoint *p, unsigned char radius) {
-        circle(p->getX(), p->getY(), radius);
+    inline void drawCircle(GlcdPoint *p, unsigned char radius) {
+        drawCircle(p->getX(), p->getY(), radius);
     }
 };
 

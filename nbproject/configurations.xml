@@ -10,6 +10,12 @@
           <df name="read_simple_font">
             <in>read_simple_font.ino</in>
           </df>
+          <df name="reading_from_pgm">
+            <in>reading_from_pgm.ino</in>
+          </df>
+          <df name="using_glcd_straight">
+            <in>using_glcd_straight.ino</in>
+          </df>
           <df name="using_glcd_wire">
             <in>using_glcd_wire.ino</in>
           </df>
@@ -41,6 +47,9 @@
       </df>
       <df name="GlcdDrawer">
         <df name="examples">
+          <df name="drawing_glcd_straight">
+            <in>drawing_glcd_straight.ino</in>
+          </df>
           <df name="drawing_glcd_wire">
             <in>drawing_glcd_wire.ino</in>
           </df>
@@ -102,6 +111,23 @@
           <buildCommand>${MAKE} -f Makefile</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
           <executablePath></executablePath>
+          <ccTool>
+            <incDir>
+              <pElem>../io</pElem>
+              <pElem>../io/InputStream</pElem>
+              <pElem>../io/Seekable</pElem>
+              <pElem>../io/SeekableInputStream</pElem>
+              <pElem>../io/ExternalEepromInputStream</pElem>
+              <pElem>../io/Closeable</pElem>
+              <pElem>../../driver/memory/External24cl256Eeprom</pElem>
+              <pElem>../../driver/memory/ExternalEeprom</pElem>
+              <pElem>../io/ExternalEepromSeekableInputStream</pElem>
+              <pElem>../../driver/glcd</pElem>
+              <pElem>../../driver/glcd/GlcdStraight</pElem>
+              <pElem>../../driver/glcd/GlcdWire</pElem>
+              <pElem>../../driver/glcd/Glcd</pElem>
+            </incDir>
+          </ccTool>
         </makeTool>
       </makefileType>
       <folder path="graphic/GlcdBitmapFont">

@@ -16,7 +16,7 @@
 GlcdSimpleText::GlcdSimpleText(Glcd *glcd, GlcdBitmapFont *font, GlcdGraphicState *graphicState) : GlcdText(glcd, font, graphicState) {
 }
 
-void GlcdSimpleText::printChar(int x, int y, const unsigned char c, int size) {
+void GlcdSimpleText::printChar(unsigned char x, unsigned char y, const unsigned char c, unsigned char size) {
 
     unsigned char rows, column, glyphBuf[font->getGlyphLength()];
     
@@ -36,8 +36,12 @@ void GlcdSimpleText::printChar(int x, int y, const unsigned char c, int size) {
         for (unsigned char j = 0; j < rows; j++) {
 
             // Column
-            column = glyphBuf[j * font->getCharacterWidth() + i];    
+            column = glyphBuf[j * font->getCharacterWidth() + i];
             
+            if (graphicState->getColor() == Glcd::COLOR_BLACK) {
+                column = ~column;
+            }
+
             // Streaks the column.
             glcd->streak(x + i, y, column);
         }

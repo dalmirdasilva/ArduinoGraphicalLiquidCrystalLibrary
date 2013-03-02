@@ -32,7 +32,7 @@ GlcdGraphicState *GlcdDrawer::getGraphicState() {
     return graphicState;
 }
 
-void GlcdDrawer::line(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2) {
+void GlcdDrawer::drawLine(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2) {
 
     unsigned char dx, dy;
     char sx, sy;
@@ -78,41 +78,40 @@ void GlcdDrawer::line(unsigned char x1, unsigned char y1, unsigned char x2, unsi
     }
 }
 
-void GlcdDrawer::rect(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2) {
+void GlcdDrawer::drawRectangle(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2) {
 
     if (graphicState->getFill()) {
 
         // Find the y min and max
-        unsigned char y_min, y_max;
+        unsigned char yMin, yMax;
 
         if (y1 < y2) {
-            y_min = y1;
-            y_max = y2;
+            yMin = y1;
+            yMax = y2;
         } else {
-            y_min = y2;
-            y_max = y1;
+            yMin = y2;
+            yMax = y1;
         }
 
         // Drawer lines to fill the rectangle
-        for (; y_min <= y_max; y_min++) {
-            line(x1, y_min, x2, y_min);
+        for (; yMin <= yMax; yMin++) {
+            drawLine(x1, yMin, x2, yMin);
         }
     } else {
 
         // Drawer the 4 sides
-        line(x1, y1, x2, y1);
-        line(x1, y2, x2, y2);
-        line(x1, y1, x1, y2);
-        line(x2, y1, x2, y2);
+        drawLine(x1, y1, x2, y1);
+        drawLine(x1, y2, x2, y2);
+        drawLine(x1, y1, x1, y2);
+        drawLine(x2, y1, x2, y2);
     }
 }
 
-void GlcdDrawer::circle(unsigned char x, unsigned char y, unsigned char radius) {
+void GlcdDrawer::drawCircle(unsigned char x, unsigned char y, unsigned char radius) {
 
     int P = 1 - radius;
     unsigned char a = 0;
     unsigned char b = radius;
-    unsigned char i = 0;
 
     // To fit the glcd screen
     if (x < radius) {
@@ -132,10 +131,10 @@ void GlcdDrawer::circle(unsigned char x, unsigned char y, unsigned char radius) 
         // Fill
         if (graphicState->getFill()) {
 
-            line(x - a, y + b, x + a, y + b);
-            line(x - a, y - b, x + a, y - b);
-            line(x - b, y + a, x + b, y + a);
-            line(x - b, y - a, x + b, y - a);
+            drawLine(x - a, y + b, x + a, y + b);
+            drawLine(x - a, y - b, x + a, y - b);
+            drawLine(x - b, y + a, x + b, y + a);
+            drawLine(x - b, y - a, x + b, y - a);
 
         // Stroke
         } else {

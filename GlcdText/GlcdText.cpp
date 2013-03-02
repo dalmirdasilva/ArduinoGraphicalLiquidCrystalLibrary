@@ -71,7 +71,7 @@ void GlcdText::printChar(unsigned char x, unsigned char y, const unsigned char c
                         for (unsigned char z = 0; z < size; z++) {
 
                             // Draws the pixel
-                            glcd->plot(x + z, y + j * size + k, graphicState->getColor());
+                            glcd->plot(x + z, y + (j * size) + k + (8 * size * row), graphicState->getColor());
                         }
                     }
                 }
@@ -89,17 +89,22 @@ unsigned char GlcdText::printString(unsigned char left, unsigned char top, unsig
     for (i = 0; (i < count) && (text[i] != '\0'); i++) {
 
         // Performs character wrapping
-        if (x + (font->getCharacterWidth() * size) > right) {
+        if (x + (font->getCharacterWidth() * size) > right || text[i] == '\n') {
 
             // Set x at left position
             x = left;
 
             // Set y at next position down
             y += (font->getCharacterHeight() * size) + graphicState->getLeading();
+
+            // Do not print a space as first character of the line or new line.
+            if (text[i] == ' ' || text[i] == '\n') {
+                continue;
+            }
         }
 
         // Out of printable area
-        if ((y + font->getCharacterHeight()) >= bottom) {
+        if (y + (font->getCharacterHeight() * size) >= bottom) {
             break;
         }
 

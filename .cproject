@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="de.innot.avreclipse.configuration.lib.release.66605692">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="de.innot.avreclipse.configuration.lib.release.66605692" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="a" artifactName="${ProjName}" buildArtefactType="de.innot.avreclipse.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=de.innot.avreclipse.buildArtefactType.staticLib" cleanCommand="rm -rf" description="" id="de.innot.avreclipse.configuration.lib.release.66605692" name="Release" parent="de.innot.avreclipse.configuration.lib.release">
+					<folderInfo id="de.innot.avreclipse.configuration.lib.release.66605692." name="/" resourcePath="">
+						<toolChain id="de.innot.avreclipse.toolchain.winavr.lib.release.2079954459" name="AVR-GCC Toolchain" superClass="de.innot.avreclipse.toolchain.winavr.lib.release">
+							<option id="de.innot.avreclipse.toolchain.options.toolchain.objdump.lib.release.2092501299" name="Generate Extended Listing (Source + generated Assembler)" superClass="de.innot.avreclipse.toolchain.options.toolchain.objdump.lib.release"/>
+							<option id="de.innot.avreclipse.toolchain.options.toolchain.size.lib.release.1458071496" name="Print Size" superClass="de.innot.avreclipse.toolchain.options.toolchain.size.lib.release"/>
+							<targetPlatform id="de.innot.avreclipse.targetplatform.winavr.lib.release.317549060" name="AVR Cross-Target" superClass="de.innot.avreclipse.targetplatform.winavr.lib.release"/>
+							<builder buildPath="${workspace_loc:/ArduinoGlcdLibrary/Release}" id="de.innot.avreclipse.target.builder.winavr.lib.release.1101543974" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="AVR GNU Make Builder" superClass="de.innot.avreclipse.target.builder.winavr.lib.release"/>
+							<tool id="de.innot.avreclipse.tool.assembler.winavr.lib.release.1034018795" name="AVR Assembler" superClass="de.innot.avreclipse.tool.assembler.winavr.lib.release">
+								<option id="de.innot.avreclipse.assembler.option.debug.level.1300333566" name="Generate Debugging Info" superClass="de.innot.avreclipse.assembler.option.debug.level" value="de.innot.avreclipse.assembler.option.debug.level.none" valueType="enumerated"/>
+								<inputType id="de.innot.avreclipse.tool.assembler.input.325169084" superClass="de.innot.avreclipse.tool.assembler.input"/>
+							</tool>
+							<tool id="de.innot.avreclipse.tool.compiler.winavr.lib.release.1396234380" name="AVR Compiler" superClass="de.innot.avreclipse.tool.compiler.winavr.lib.release">
+								<option id="de.innot.avreclipse.compiler.option.debug.level.101938321" name="Generate Debugging Info" superClass="de.innot.avreclipse.compiler.option.debug.level" value="de.innot.avreclipse.compiler.option.debug.level.none" valueType="enumerated"/>
+								<option id="de.innot.avreclipse.compiler.option.optimize.1794802001" name="Optimization Level" superClass="de.innot.avreclipse.compiler.option.optimize" value="de.innot.avreclipse.compiler.optimize.size" valueType="enumerated"/>
+								<option id="de.innot.avreclipse.compiler.option.incpath.1633960192" name="Include Paths (-I)" superClass="de.innot.avreclipse.compiler.option.incpath" valueType="includePath"/>
+								<inputType id="de.innot.avreclipse.compiler.winavr.input.531136383" name="C Source Files" superClass="de.innot.avreclipse.compiler.winavr.input"/>
+							</tool>
+							<tool id="de.innot.avreclipse.tool.cppcompiler.lib.release.1198286200" name="AVR C++ Compiler" superClass="de.innot.avreclipse.tool.cppcompiler.lib.release">
+								<option id="de.innot.avreclipse.cppcompiler.option.debug.level.2018681860" name="Generate Debugging Info" superClass="de.innot.avreclipse.cppcompiler.option.debug.level" value="de.innot.avreclipse.cppcompiler.option.debug.level.none" valueType="enumerated"/>
+								<option id="de.innot.avreclipse.cppcompiler.option.optimize.170096189" name="Optimization Level" superClass="de.innot.avreclipse.cppcompiler.option.optimize" value="de.innot.avreclipse.cppcompiler.optimize.size" valueType="enumerated"/>
+								<option id="de.innot.avreclipse.cppcompiler.option.incpath.1331096118" name="Include Paths (-I)" superClass="de.innot.avreclipse.cppcompiler.option.incpath" valueType="includePath">
+									<listOptionValue builtIn="false" value="/usr/share/arduino/libraries/Wire/utility"/>
+									<listOptionValue builtIn="false" value="/usr/share/arduino/libraries/Wire"/>
+									<listOptionValue builtIn="false" value="/usr/share/arduino/hardware/arduino/variants/standard"/>
+									<listOptionValue builtIn="false" value="/usr/share/arduino/hardware/arduino/cores/arduino"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/GlcdBitmapFont}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/GlcdBitmapImage}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/GlcdBitmapRender}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/GlcdDrawer}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/GlcdGraphicState}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/GlcdPoint}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/GlcdRectangle}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/GlcdSimpleText}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/GlcdText}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/GlcdTextLine}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoGlcdDriver/Glcd}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoGlcdDriver/GlcdStraight}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoGlcdDriver/GlcdWire}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/BufferedInputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/BufferedOutputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/ByteArrayInputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/ByteArrayOutputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/ByteArraySeekableInputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/Closeable}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/DataInput}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/DataInputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/DataOutput}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/DataOutputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/ExternalEepromInputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/ExternalEepromOutputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/ExternalEepromSeekableInputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/FilterInputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/FilterOutputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/HardwareSerialInputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/HardwareSerialOutputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/InputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/nbproject}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/OutputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/PgmspaceInputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/PgmspaceSeekableInputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/RandomAccess}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/RandomAccessByteArray}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/RandomAccessExternalEeprom}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/RandomAccessResource}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/ResourceInputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/ResourceOutputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/ResourceSeekableInputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/Seekable}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/SeekableInputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/SerialInputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/SerialOutputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/SoftwareSerialInputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/SoftwareSerialOutputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/WireInputStream}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoIO/WireOutputSream}&quot;"/>
+								</option>
+								<inputType id="de.innot.avreclipse.cppcompiler.input.1314041684" superClass="de.innot.avreclipse.cppcompiler.input"/>
+							</tool>
+							<tool id="de.innot.avreclipse.tool.linker.winavr.base.1296229109" name="AVR C Linker" superClass="de.innot.avreclipse.tool.linker.winavr.base"/>
+							<tool id="de.innot.avreclipse.tool.cpplinker.base.1301798495" name="AVR C++ Linker" superClass="de.innot.avreclipse.tool.cpplinker.base"/>
+							<tool id="de.innot.avreclipse.tool.archiver.winavr.lib.release.66577312" name="AVR Archiver" superClass="de.innot.avreclipse.tool.archiver.winavr.lib.release"/>
+							<tool id="de.innot.avreclipse.tool.objdump.winavr.lib.release.1428972521" name="AVR Create Extended Listing" superClass="de.innot.avreclipse.tool.objdump.winavr.lib.release"/>
+							<tool id="de.innot.avreclipse.tool.size.winavr.lib.release.1484177990" name="Print Size" superClass="de.innot.avreclipse.tool.size.winavr.lib.release"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="ArduinoGlcdLibrary.de.innot.avreclipse.project.winavr.staticlib.1087796696" name="AVR Cross Target Static Library" projectType="de.innot.avreclipse.project.winavr.staticlib"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.lib.release.66605692;de.innot.avreclipse.configuration.lib.release.66605692.;de.innot.avreclipse.tool.compiler.winavr.lib.release.1396234380;de.innot.avreclipse.compiler.winavr.input.531136383">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileC"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.lib.release.620919251;cdt.managedbuild.config.gnu.lib.release.620919251.;cdt.managedbuild.tool.gnu.cpp.compiler.lib.release.945049681;cdt.managedbuild.tool.gnu.cpp.compiler.input.607928147">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.lib.release.66605692;de.innot.avreclipse.configuration.lib.release.66605692.;de.innot.avreclipse.tool.cppcompiler.lib.release.1198286200;de.innot.avreclipse.cppcompiler.input.1314041684">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileCPP"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.lib.release.620919251;cdt.managedbuild.config.gnu.lib.release.620919251.;cdt.managedbuild.tool.gnu.c.compiler.lib.release.1031985125;cdt.managedbuild.tool.gnu.c.compiler.input.1740186772">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/ArduinoGlcdLibrary"/>
+		</configuration>
+	</storageModule>
+</cproject>

@@ -13,25 +13,60 @@
 
 #include "GlcdTextLine.h"
 
-GlcdTextLine::GlcdTextLine(GlcdText *glcdText, GlcdDrawer *glcdDrawer, unsigned char y) : glcdText(glcdText), glcdDrawer(glcdDrawer) {
+GlcdTextLine::GlcdTextLine(GlcdText *glcdText, GlcdDrawer *glcdDrawer,
+        unsigned char y) :
+        glcdText(glcdText), glcdDrawer(glcdDrawer) {
     this->y = y;
 }
 
 void GlcdTextLine::printLines(const unsigned char *text, unsigned char count) {
-    unsigned char realCharacterHeight, printedText = 0;
-    realCharacterHeight = glcdText->getFont()->getCharacterHeight() + glcdText->getGraphicState()->getLeading();
-    GlcdRectangle printableArea(0, y, GLCD_WIDTH - 1, y + realCharacterHeight);
+    unsigned char realCharacterHeight, index = 0;
+    realCharacterHeight = glcdText->getFont()->getCharacterHeight()
+            + glcdText->getGraphicState()->getLeading();
+    Serial.print("realCharacterHeight: ");
+    Serial.println(realCharacterHeight);
+    Serial.print("y: ");
+    Serial.println(y);
+    GlcdRectangle area(0, (y & (GLCD_HEIGHT - 1)), GLCD_WIDTH - 1, ((y
+            + realCharacterHeight) & (GLCD_HEIGHT - 1)));
+    Serial.print("L: ");
+    Serial.println(area.getLeft());
+    Serial.print("R: ");
+    Serial.println(area.getRight());
+    Serial.print("T: ");
+    Serial.println(area.getTop());
+    Serial.print("B: ");
+    Serial.println(area.getBottom());
     while (1) {
-        int printed;
+        unsigned char printed;
+        /*
         glcdDrawer->getGraphicState()->invertColor();
-        glcdDrawer->rect(printableArea.getLeft(), printableArea.getTop(), printableArea.getRight(), printableArea.getBottom());
+        glcdDrawer->drawRectangle(&area);
         glcdDrawer->getGraphicState()->invertColor();
-        printed = glcdText->printString(&printableArea, &text[printedText], count);
+        */
+        printed = glcdText->printString(&area, &text[index], count);
+        Serial.print("printed:");
+        Serial.println(printed);
         if (printed == 0) {
             break;
         }
+        area.setBottom((area.getBottom() + realCharacterHeight) & (GLCD_HEIGHT - 1));
+        area.setTop((area.getTop() + realCharacterHeight) & (GLCD_HEIGHT - 1));
+
+
+        Serial.print("sL");
+        Serial.println(area.getLeft());
+        Serial.print("sR: ");
+        Serial.println(area.getRight());
+        Serial.print("sT: ");
+        Serial.println(area.getTop());
+        Serial.print("sB: ");
+        Serial.println(area.getBottom());
+
+
+        y += realCharacterHeight;
         glcdText->getGlcd()->scroll(Glcd::CHIP_ALL, Glcd::SCROLL_UP, realCharacterHeight);
-        printedText += printed;
+        index += printed;
     }
 }
 

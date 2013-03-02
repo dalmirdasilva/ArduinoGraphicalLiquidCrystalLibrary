@@ -17,7 +17,9 @@ GlcdPoint::GlcdPoint() {
     GlcdPoint(0, 0);
 }
 
-GlcdPoint::GlcdPoint(unsigned char x, unsigned char y) : x(x), y(y) {
+GlcdPoint::GlcdPoint(unsigned char x, unsigned char y) {
+    this->x = x;
+    this->y = y;
 }
 
 void GlcdPoint::setX(unsigned char x) {

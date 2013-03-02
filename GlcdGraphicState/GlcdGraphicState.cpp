@@ -46,6 +46,8 @@ Glcd::Color GlcdGraphicState::getColor() {
 }
 
 void GlcdGraphicState::invertColor() {
+    color = (Glcd::Color) ~color;
+    /*
     switch(color) {
         case Glcd::COLOR_BLACK:
             color = Glcd::COLOR_WHITE;
@@ -54,6 +56,7 @@ void GlcdGraphicState::invertColor() {
             color = Glcd::COLOR_BLACK;
         break;
     }
+    */
 }
 
 void GlcdGraphicState::setSpace(unsigned char space) {
