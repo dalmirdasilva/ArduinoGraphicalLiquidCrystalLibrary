@@ -137,10 +137,10 @@ public:
      * 
      * NOTE: (x,y) is the upper left coordinate of the first letter
      * 
-     * @param left                      The rectangle left positions.
-     * @param top                       The rectangle top positions.
-     * @param right                     The rectangle right positions.
-     * @param bottom                    The rectangle bottom positions.
+     * @param left                      The rectangle left position.
+     * @param top                       The rectangle top position.
+     * @param right                     The rectangle right position.
+     * @param bottom                    The rectangle bottom position.
      * @param text                      The text to be printed.
      * @param count                     The maximum number of chars to print.
      * @param size                      The text size.
@@ -153,10 +153,10 @@ public:
      * 
      * NOTE: (x,y) is the upper left coordinate of the first letter
      * 
-     * @param left                      The rectangle left positions.
-     * @param top                       The rectangle top positions.
-     * @param right                     The rectangle right positions.
-     * @param bottom                    The rectangle bottom positions.
+     * @param left                      The rectangle left position.
+     * @param top                       The rectangle top position.
+     * @param right                     The rectangle right position.
+     * @param bottom                    The rectangle bottom position.
      * @param text                      The text to be printed.
      * @param count                     The maximum number of chars to print.
      * @return                          The number of printed chars.

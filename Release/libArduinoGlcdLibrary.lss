@@ -322,11 +322,11 @@ GlcdText.o:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         0000031a  00000000  00000000  00000034  2**0
+  0 .text         0000036c  00000000  00000000  00000034  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  1 .data         00000008  00000000  00000000  0000034e  2**0
+  1 .data         00000008  00000000  00000000  000003a0  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, DATA
-  2 .bss          00000000  00000000  00000000  00000356  2**0
+  2 .bss          00000000  00000000  00000000  000003a8  2**0
                   ALLOC
 Disassembly of section .text:
 
@@ -571,15 +571,15 @@ Disassembly of section .text:
  1c2:	de bf       	out	0x3e, r29	; 62
  1c4:	0f be       	out	0x3f, r0	; 63
  1c6:	cd bf       	out	0x3d, r28	; 61
- 1c8:	6c 01       	movw	r12, r24
- 1ca:	6d 83       	std	Y+5, r22	; 0x05
- 1cc:	4e 83       	std	Y+6, r20	; 0x06
- 1ce:	f2 2e       	mov	r15, r18
- 1d0:	a0 2e       	mov	r10, r16
+ 1c8:	7c 01       	movw	r14, r24
+ 1ca:	46 2e       	mov	r4, r22
+ 1cc:	4b 83       	std	Y+3, r20	; 0x03
+ 1ce:	12 2f       	mov	r17, r18
+ 1d0:	50 2e       	mov	r5, r16
  1d2:	2d b7       	in	r18, 0x3d	; 61
  1d4:	3e b7       	in	r19, 0x3e	; 62
- 1d6:	3a 87       	std	Y+10, r19	; 0x0a
- 1d8:	29 87       	std	Y+9, r18	; 0x09
+ 1d6:	3f 83       	std	Y+7, r19	; 0x07
+ 1d8:	2e 83       	std	Y+6, r18	; 0x06
  1da:	fc 01       	movw	r30, r24
  1dc:	84 81       	ldd	r24, Z+4	; 0x04
  1de:	95 81       	ldd	r25, Z+5	; 0x05
@@ -593,149 +593,187 @@ Disassembly of section .text:
  1f0:	3e bf       	out	0x3e, r19	; 62
  1f2:	0f be       	out	0x3f, r0	; 63
  1f4:	2d bf       	out	0x3d, r18	; 61
- 1f6:	8d b7       	in	r24, 0x3d	; 61
- 1f8:	9e b7       	in	r25, 0x3e	; 62
- 1fa:	01 96       	adiw	r24, 0x01	; 1
- 1fc:	98 87       	std	Y+8, r25	; 0x08
- 1fe:	8f 83       	std	Y+7, r24	; 0x07
- 200:	f6 01       	movw	r30, r12
- 202:	84 81       	ldd	r24, Z+4	; 0x04
- 204:	95 81       	ldd	r25, Z+5	; 0x05
- 206:	0e 94 00 00 	call	0	; 0x0 <_ZN8GlcdTextC2EP4GlcdP14GlcdBitmapFontP16GlcdGraphicState>
- 20a:	58 2e       	mov	r5, r24
- 20c:	f6 01       	movw	r30, r12
- 20e:	a4 81       	ldd	r26, Z+4	; 0x04
- 210:	b5 81       	ldd	r27, Z+5	; 0x05
- 212:	ed 91       	ld	r30, X+
- 214:	fc 91       	ld	r31, X
- 216:	11 97       	sbiw	r26, 0x01	; 1
- 218:	01 90       	ld	r0, Z+
- 21a:	f0 81       	ld	r31, Z
- 21c:	e0 2d       	mov	r30, r0
- 21e:	cd 01       	movw	r24, r26
- 220:	6f 81       	ldd	r22, Y+7	; 0x07
- 222:	78 85       	ldd	r23, Y+8	; 0x08
- 224:	4f 2d       	mov	r20, r15
- 226:	09 95       	icall
- 228:	f5 2d       	mov	r31, r5
- 22a:	f6 95       	lsr	r31
- 22c:	f6 95       	lsr	r31
- 22e:	f6 95       	lsr	r31
- 230:	fa 83       	std	Y+2, r31	; 0x02
- 232:	50 9e       	mul	r5, r16
- 234:	20 2d       	mov	r18, r0
- 236:	11 24       	eor	r1, r1
- 238:	29 83       	std	Y+1, r18	; 0x01
- 23a:	99 24       	eor	r9, r9
- 23c:	30 2f       	mov	r19, r16
- 23e:	33 0f       	add	r19, r19
- 240:	33 0f       	add	r19, r19
- 242:	33 0f       	add	r19, r19
- 244:	3b 87       	std	Y+11, r19	; 0x0b
- 246:	00 c0       	rjmp	.+0      	; 0x248 <_ZN8GlcdText9printCharEhhhh+0xb4>
- 248:	6e 80       	ldd	r6, Y+6	; 0x06
- 24a:	79 2c       	mov	r7, r9
- 24c:	88 24       	eor	r8, r8
- 24e:	00 c0       	rjmp	.+0      	; 0x250 <_ZN8GlcdText9printCharEhhhh+0xbc>
- 250:	ef 81       	ldd	r30, Y+7	; 0x07
- 252:	f8 85       	ldd	r31, Y+8	; 0x08
- 254:	e7 0d       	add	r30, r7
- 256:	f1 1d       	adc	r31, r1
- 258:	80 81       	ld	r24, Z
- 25a:	b6 2c       	mov	r11, r6
- 25c:	ee 24       	eor	r14, r14
- 25e:	28 2e       	mov	r2, r24
- 260:	33 24       	eor	r3, r3
- 262:	00 c0       	rjmp	.+0      	; 0x264 <_ZN8GlcdText9printCharEhhhh+0xd0>
- 264:	c1 01       	movw	r24, r2
- 266:	0e 2c       	mov	r0, r14
- 268:	00 c0       	rjmp	.+0      	; 0x26a <_ZN8GlcdText9printCharEhhhh+0xd6>
- 26a:	95 95       	asr	r25
- 26c:	87 95       	ror	r24
- 26e:	0a 94       	dec	r0
- 270:	02 f4       	brpl	.+0      	; 0x272 <_ZN8GlcdText9printCharEhhhh+0xde>
- 272:	80 ff       	sbrs	r24, 0
- 274:	00 c0       	rjmp	.+0      	; 0x276 <_ZN8GlcdText9printCharEhhhh+0xe2>
- 276:	ff 24       	eor	r15, r15
- 278:	00 c0       	rjmp	.+0      	; 0x27a <_ZN8GlcdText9printCharEhhhh+0xe6>
- 27a:	f6 01       	movw	r30, r12
- 27c:	02 80       	ldd	r0, Z+2	; 0x02
- 27e:	f3 81       	ldd	r31, Z+3	; 0x03
- 280:	e0 2d       	mov	r30, r0
- 282:	fc 83       	std	Y+4, r31	; 0x04
- 284:	eb 83       	std	Y+3, r30	; 0x03
- 286:	f6 01       	movw	r30, r12
- 288:	86 81       	ldd	r24, Z+6	; 0x06
- 28a:	97 81       	ldd	r25, Z+7	; 0x07
- 28c:	0e 94 00 00 	call	0	; 0x0 <_ZN8GlcdTextC2EP4GlcdP14GlcdBitmapFontP16GlcdGraphicState>
- 290:	28 2f       	mov	r18, r24
- 292:	6d 81       	ldd	r22, Y+5	; 0x05
- 294:	61 0f       	add	r22, r17
- 296:	8b 81       	ldd	r24, Y+3	; 0x03
- 298:	9c 81       	ldd	r25, Y+4	; 0x04
- 29a:	44 2d       	mov	r20, r4
- 29c:	0e 94 00 00 	call	0	; 0x0 <_ZN8GlcdTextC2EP4GlcdP14GlcdBitmapFontP16GlcdGraphicState>
- 2a0:	1f 5f       	subi	r17, 0xFF	; 255
- 2a2:	1a 15       	cp	r17, r10
- 2a4:	00 f0       	brcs	.+0      	; 0x2a6 <_ZN8GlcdText9printCharEhhhh+0x112>
- 2a6:	f3 94       	inc	r15
- 2a8:	fa 14       	cp	r15, r10
- 2aa:	00 f4       	brcc	.+0      	; 0x2ac <_ZN8GlcdText9printCharEhhhh+0x118>
- 2ac:	4f 2c       	mov	r4, r15
- 2ae:	4b 0c       	add	r4, r11
- 2b0:	10 e0       	ldi	r17, 0x00	; 0
- 2b2:	00 c0       	rjmp	.+0      	; 0x2b4 <_ZN8GlcdText9printCharEhhhh+0x120>
- 2b4:	e3 94       	inc	r14
- 2b6:	ba 0c       	add	r11, r10
- 2b8:	f9 81       	ldd	r31, Y+1	; 0x01
- 2ba:	ef 16       	cp	r14, r31
- 2bc:	00 f0       	brcs	.+0      	; 0x2be <_ZN8GlcdText9printCharEhhhh+0x12a>
- 2be:	83 94       	inc	r8
- 2c0:	2b 85       	ldd	r18, Y+11	; 0x0b
- 2c2:	62 0e       	add	r6, r18
- 2c4:	75 0c       	add	r7, r5
- 2c6:	3a 81       	ldd	r19, Y+2	; 0x02
- 2c8:	83 16       	cp	r8, r19
- 2ca:	00 f0       	brcs	.+0      	; 0x2cc <_ZN8GlcdText9printCharEhhhh+0x138>
- 2cc:	93 94       	inc	r9
- 2ce:	8d 81       	ldd	r24, Y+5	; 0x05
- 2d0:	8a 0d       	add	r24, r10
- 2d2:	8d 83       	std	Y+5, r24	; 0x05
- 2d4:	95 14       	cp	r9, r5
- 2d6:	00 f4       	brcc	.+0      	; 0x2d8 <_ZN8GlcdText9printCharEhhhh+0x144>
- 2d8:	00 c0       	rjmp	.+0      	; 0x2da <_ZN8GlcdText9printCharEhhhh+0x146>
- 2da:	e9 85       	ldd	r30, Y+9	; 0x09
- 2dc:	fa 85       	ldd	r31, Y+10	; 0x0a
- 2de:	0f b6       	in	r0, 0x3f	; 63
- 2e0:	f8 94       	cli
- 2e2:	fe bf       	out	0x3e, r31	; 62
- 2e4:	0f be       	out	0x3f, r0	; 63
- 2e6:	ed bf       	out	0x3d, r30	; 61
- 2e8:	2b 96       	adiw	r28, 0x0b	; 11
- 2ea:	0f b6       	in	r0, 0x3f	; 63
- 2ec:	f8 94       	cli
- 2ee:	de bf       	out	0x3e, r29	; 62
- 2f0:	0f be       	out	0x3f, r0	; 63
- 2f2:	cd bf       	out	0x3d, r28	; 61
- 2f4:	cf 91       	pop	r28
- 2f6:	df 91       	pop	r29
- 2f8:	1f 91       	pop	r17
- 2fa:	0f 91       	pop	r16
- 2fc:	ff 90       	pop	r15
- 2fe:	ef 90       	pop	r14
- 300:	df 90       	pop	r13
- 302:	cf 90       	pop	r12
- 304:	bf 90       	pop	r11
- 306:	af 90       	pop	r10
- 308:	9f 90       	pop	r9
- 30a:	8f 90       	pop	r8
- 30c:	7f 90       	pop	r7
- 30e:	6f 90       	pop	r6
- 310:	5f 90       	pop	r5
- 312:	4f 90       	pop	r4
- 314:	3f 90       	pop	r3
- 316:	2f 90       	pop	r2
- 318:	08 95       	ret
+ 1f6:	4d b7       	in	r20, 0x3d	; 61
+ 1f8:	5e b7       	in	r21, 0x3e	; 62
+ 1fa:	4f 5f       	subi	r20, 0xFF	; 255
+ 1fc:	5f 4f       	sbci	r21, 0xFF	; 255
+ 1fe:	5d 83       	std	Y+5, r21	; 0x05
+ 200:	4c 83       	std	Y+4, r20	; 0x04
+ 202:	f7 01       	movw	r30, r14
+ 204:	a4 81       	ldd	r26, Z+4	; 0x04
+ 206:	b5 81       	ldd	r27, Z+5	; 0x05
+ 208:	ed 91       	ld	r30, X+
+ 20a:	fc 91       	ld	r31, X
+ 20c:	11 97       	sbiw	r26, 0x01	; 1
+ 20e:	01 90       	ld	r0, Z+
+ 210:	f0 81       	ld	r31, Z
+ 212:	e0 2d       	mov	r30, r0
+ 214:	cd 01       	movw	r24, r26
+ 216:	ba 01       	movw	r22, r20
+ 218:	41 2f       	mov	r20, r17
+ 21a:	09 95       	icall
+ 21c:	77 24       	eor	r7, r7
+ 21e:	20 2f       	mov	r18, r16
+ 220:	30 e0       	ldi	r19, 0x00	; 0
+ 222:	3b 87       	std	Y+11, r19	; 0x0b
+ 224:	2a 87       	std	Y+10, r18	; 0x0a
+ 226:	00 c0       	rjmp	.+0      	; 0x228 <_ZN8GlcdText9printCharEhhhh+0x94>
+ 228:	f7 01       	movw	r30, r14
+ 22a:	84 81       	ldd	r24, Z+4	; 0x04
+ 22c:	95 81       	ldd	r25, Z+5	; 0x05
+ 22e:	0e 94 00 00 	call	0	; 0x0 <_ZN8GlcdTextC2EP4GlcdP14GlcdBitmapFontP16GlcdGraphicState>
+ 232:	86 95       	lsr	r24
+ 234:	86 95       	lsr	r24
+ 236:	86 95       	lsr	r24
+ 238:	8a 83       	std	Y+2, r24	; 0x02
+ 23a:	88 24       	eor	r8, r8
+ 23c:	aa 24       	eor	r10, r10
+ 23e:	bb 24       	eor	r11, r11
+ 240:	27 2d       	mov	r18, r7
+ 242:	30 e0       	ldi	r19, 0x00	; 0
+ 244:	39 87       	std	Y+9, r19	; 0x09
+ 246:	28 87       	std	Y+8, r18	; 0x08
+ 248:	00 c0       	rjmp	.+0      	; 0x24a <_ZN8GlcdText9printCharEhhhh+0xb6>
+ 24a:	f7 01       	movw	r30, r14
+ 24c:	84 81       	ldd	r24, Z+4	; 0x04
+ 24e:	95 81       	ldd	r25, Z+5	; 0x05
+ 250:	0e 94 00 00 	call	0	; 0x0 <_ZN8GlcdTextC2EP4GlcdP14GlcdBitmapFontP16GlcdGraphicState>
+ 254:	88 9d       	mul	r24, r8
+ 256:	f0 01       	movw	r30, r0
+ 258:	11 24       	eor	r1, r1
+ 25a:	2c 81       	ldd	r18, Y+4	; 0x04
+ 25c:	3d 81       	ldd	r19, Y+5	; 0x05
+ 25e:	e2 0f       	add	r30, r18
+ 260:	f3 1f       	adc	r31, r19
+ 262:	48 85       	ldd	r20, Y+8	; 0x08
+ 264:	59 85       	ldd	r21, Y+9	; 0x09
+ 266:	e4 0f       	add	r30, r20
+ 268:	f5 1f       	adc	r31, r21
+ 26a:	80 81       	ld	r24, Z
+ 26c:	99 24       	eor	r9, r9
+ 26e:	28 2e       	mov	r2, r24
+ 270:	33 24       	eor	r3, r3
+ 272:	00 c0       	rjmp	.+0      	; 0x274 <_ZN8GlcdText9printCharEhhhh+0xe0>
+ 274:	c8 01       	movw	r24, r16
+ 276:	8a 0d       	add	r24, r10
+ 278:	9b 1d       	adc	r25, r11
+ 27a:	fc 01       	movw	r30, r24
+ 27c:	2a 85       	ldd	r18, Y+10	; 0x0a
+ 27e:	3b 85       	ldd	r19, Y+11	; 0x0b
+ 280:	e2 9f       	mul	r30, r18
+ 282:	c0 01       	movw	r24, r0
+ 284:	e3 9f       	mul	r30, r19
+ 286:	90 0d       	add	r25, r0
+ 288:	f2 9f       	mul	r31, r18
+ 28a:	90 0d       	add	r25, r0
+ 28c:	11 24       	eor	r1, r1
+ 28e:	3b 81       	ldd	r19, Y+3	; 0x03
+ 290:	38 0f       	add	r19, r24
+ 292:	39 83       	std	Y+1, r19	; 0x01
+ 294:	c1 01       	movw	r24, r2
+ 296:	00 c0       	rjmp	.+0      	; 0x298 <_ZN8GlcdText9printCharEhhhh+0x104>
+ 298:	95 95       	asr	r25
+ 29a:	87 95       	ror	r24
+ 29c:	0a 95       	dec	r16
+ 29e:	02 f4       	brpl	.+0      	; 0x2a0 <_ZN8GlcdText9printCharEhhhh+0x10c>
+ 2a0:	80 ff       	sbrs	r24, 0
+ 2a2:	00 c0       	rjmp	.+0      	; 0x2a4 <_ZN8GlcdText9printCharEhhhh+0x110>
+ 2a4:	cc 24       	eor	r12, r12
+ 2a6:	00 c0       	rjmp	.+0      	; 0x2a8 <_ZN8GlcdText9printCharEhhhh+0x114>
+ 2a8:	f7 01       	movw	r30, r14
+ 2aa:	02 81       	ldd	r16, Z+2	; 0x02
+ 2ac:	13 81       	ldd	r17, Z+3	; 0x03
+ 2ae:	86 81       	ldd	r24, Z+6	; 0x06
+ 2b0:	97 81       	ldd	r25, Z+7	; 0x07
+ 2b2:	0e 94 00 00 	call	0	; 0x0 <_ZN8GlcdTextC2EP4GlcdP14GlcdBitmapFontP16GlcdGraphicState>
+ 2b6:	28 2f       	mov	r18, r24
+ 2b8:	6d 2d       	mov	r22, r13
+ 2ba:	64 0d       	add	r22, r4
+ 2bc:	c8 01       	movw	r24, r16
+ 2be:	46 2d       	mov	r20, r6
+ 2c0:	0e 94 00 00 	call	0	; 0x0 <_ZN8GlcdTextC2EP4GlcdP14GlcdBitmapFontP16GlcdGraphicState>
+ 2c4:	d3 94       	inc	r13
+ 2c6:	d5 14       	cp	r13, r5
+ 2c8:	00 f0       	brcs	.+0      	; 0x2ca <_ZN8GlcdText9printCharEhhhh+0x136>
+ 2ca:	c3 94       	inc	r12
+ 2cc:	c5 14       	cp	r12, r5
+ 2ce:	00 f4       	brcc	.+0      	; 0x2d0 <_ZN8GlcdText9printCharEhhhh+0x13c>
+ 2d0:	dd 24       	eor	r13, r13
+ 2d2:	69 80       	ldd	r6, Y+1	; 0x01
+ 2d4:	6c 0c       	add	r6, r12
+ 2d6:	00 c0       	rjmp	.+0      	; 0x2d8 <_ZN8GlcdText9printCharEhhhh+0x144>
+ 2d8:	93 94       	inc	r9
+ 2da:	09 2d       	mov	r16, r9
+ 2dc:	10 e0       	ldi	r17, 0x00	; 0
+ 2de:	f7 01       	movw	r30, r14
+ 2e0:	84 81       	ldd	r24, Z+4	; 0x04
+ 2e2:	95 81       	ldd	r25, Z+5	; 0x05
+ 2e4:	0e 94 00 00 	call	0	; 0x0 <_ZN8GlcdTextC2EP4GlcdP14GlcdBitmapFontP16GlcdGraphicState>
+ 2e8:	90 e0       	ldi	r25, 0x00	; 0
+ 2ea:	9c 01       	movw	r18, r24
+ 2ec:	4a 85       	ldd	r20, Y+10	; 0x0a
+ 2ee:	5b 85       	ldd	r21, Y+11	; 0x0b
+ 2f0:	24 9f       	mul	r18, r20
+ 2f2:	c0 01       	movw	r24, r0
+ 2f4:	25 9f       	mul	r18, r21
+ 2f6:	90 0d       	add	r25, r0
+ 2f8:	34 9f       	mul	r19, r20
+ 2fa:	90 0d       	add	r25, r0
+ 2fc:	11 24       	eor	r1, r1
+ 2fe:	08 17       	cp	r16, r24
+ 300:	19 07       	cpc	r17, r25
+ 302:	04 f4       	brge	.+0      	; 0x304 <_ZN8GlcdText9printCharEhhhh+0x170>
+ 304:	00 c0       	rjmp	.+0      	; 0x306 <_ZN8GlcdText9printCharEhhhh+0x172>
+ 306:	83 94       	inc	r8
+ 308:	88 e0       	ldi	r24, 0x08	; 8
+ 30a:	90 e0       	ldi	r25, 0x00	; 0
+ 30c:	a8 0e       	add	r10, r24
+ 30e:	b9 1e       	adc	r11, r25
+ 310:	9a 81       	ldd	r25, Y+2	; 0x02
+ 312:	89 16       	cp	r8, r25
+ 314:	00 f4       	brcc	.+0      	; 0x316 <_ZN8GlcdText9printCharEhhhh+0x182>
+ 316:	00 c0       	rjmp	.+0      	; 0x318 <_ZN8GlcdText9printCharEhhhh+0x184>
+ 318:	73 94       	inc	r7
+ 31a:	45 0c       	add	r4, r5
+ 31c:	f7 01       	movw	r30, r14
+ 31e:	84 81       	ldd	r24, Z+4	; 0x04
+ 320:	95 81       	ldd	r25, Z+5	; 0x05
+ 322:	0e 94 00 00 	call	0	; 0x0 <_ZN8GlcdTextC2EP4GlcdP14GlcdBitmapFontP16GlcdGraphicState>
+ 326:	78 16       	cp	r7, r24
+ 328:	00 f4       	brcc	.+0      	; 0x32a <_ZN8GlcdText9printCharEhhhh+0x196>
+ 32a:	00 c0       	rjmp	.+0      	; 0x32c <_ZN8GlcdText9printCharEhhhh+0x198>
+ 32c:	2e 81       	ldd	r18, Y+6	; 0x06
+ 32e:	3f 81       	ldd	r19, Y+7	; 0x07
+ 330:	0f b6       	in	r0, 0x3f	; 63
+ 332:	f8 94       	cli
+ 334:	3e bf       	out	0x3e, r19	; 62
+ 336:	0f be       	out	0x3f, r0	; 63
+ 338:	2d bf       	out	0x3d, r18	; 61
+ 33a:	2b 96       	adiw	r28, 0x0b	; 11
+ 33c:	0f b6       	in	r0, 0x3f	; 63
+ 33e:	f8 94       	cli
+ 340:	de bf       	out	0x3e, r29	; 62
+ 342:	0f be       	out	0x3f, r0	; 63
+ 344:	cd bf       	out	0x3d, r28	; 61
+ 346:	cf 91       	pop	r28
+ 348:	df 91       	pop	r29
+ 34a:	1f 91       	pop	r17
+ 34c:	0f 91       	pop	r16
+ 34e:	ff 90       	pop	r15
+ 350:	ef 90       	pop	r14
+ 352:	df 90       	pop	r13
+ 354:	cf 90       	pop	r12
+ 356:	bf 90       	pop	r11
+ 358:	af 90       	pop	r10
+ 35a:	9f 90       	pop	r9
+ 35c:	8f 90       	pop	r8
+ 35e:	7f 90       	pop	r7
+ 360:	6f 90       	pop	r6
+ 362:	5f 90       	pop	r5
+ 364:	4f 90       	pop	r4
+ 366:	3f 90       	pop	r3
+ 368:	2f 90       	pop	r2
+ 36a:	08 95       	ret
 
 GlcdSimpleText.o:     file format elf32-avr
 

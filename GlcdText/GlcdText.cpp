@@ -62,6 +62,8 @@ void GlcdText::printChar(unsigned char x, unsigned char y, const unsigned char c
             // Loop through the vertical pixels
             for (unsigned char j = 0; j < font->getCharacterHeight() * size; j++) {
 
+                unsigned char newY = y + (j * size) + (8 * r * size);
+
                 // Check if the pixel should be plotted
                 if ((column & (1 << j)) != 0) {
 
@@ -71,7 +73,7 @@ void GlcdText::printChar(unsigned char x, unsigned char y, const unsigned char c
                         for (unsigned char z = 0; z < size; z++) {
 
                             // Draws the pixel
-                            glcd->plot(x + z, y + (j * size) + k + (8 * size * row), graphicState->getColor());
+                            glcd->plot(x + z, newY + k, graphicState->getColor());
                         }
                     }
                 }
