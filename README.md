@@ -1,3 +1,3 @@
-# Arduino Graphical LCD Library
+# Arduino Graphical Liquid Crystal Library
 
 [Documentation.pdf](Documentation.pdf)

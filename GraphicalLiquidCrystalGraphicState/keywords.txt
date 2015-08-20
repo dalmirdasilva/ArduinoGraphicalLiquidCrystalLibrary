@@ -1,0 +1,32 @@
+############################################
+# Syntax Coloring Map For GraphicalLiquidCrystalGraphicState
+############################################
+
+############################################
+# Datatypes (KEYWORD1)
+############################################
+
+GraphicalLiquidCrystalGraphicState	KEYWORD1
+
+############################################
+# Methods and Functions (KEYWORD2)
+############################################
+
+
+getInstance KEYWORD2
+setFillPattern  KEYWORD2
+getFillPattern  KEYWORD2
+setLinePattern  KEYWORD2
+getLinePattern  KEYWORD2
+setColor  KEYWORD2
+getColor  KEYWORD2
+setLeading  KEYWORD2
+getLeading  KEYWORD2
+setSpace  KEYWORD2
+getSpace  KEYWORD2
+setFill KEYWORD2
+getFill KEYWORD2
+
+############################################
+# Constants (LITERAL1)
+############################################

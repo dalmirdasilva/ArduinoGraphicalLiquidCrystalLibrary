@@ -1,5 +1,14 @@
 ARDUINO_LIB_PATH=/usr/share/arduino/libraries
-LIB_LIST=GlcdBitmapFont GlcdBitmapRender GlcdGraphicState GlcdRectangle GlcdText GlcdBitmapImage GlcdDrawer GlcdPoint GlcdSimpleText GlcdTextLine
+LIB_LIST=GraphicalLiquidCrystalBitmapFont \
+	GraphicalLiquidCrystalBitmapImage \
+	GraphicalLiquidCrystalBitmapRender \
+	GraphicalLiquidCrystalDrawer \
+	GraphicalLiquidCrystalGraphicState \
+	GraphicalLiquidCrystalPoint \
+	GraphicalLiquidCrystalRectangle \
+	GraphicalLiquidCrystalSimpleText \
+	GraphicalLiquidCrystalText \
+	GraphicalLiquidCrystalTextLine
 SOURCE_PATH=`pwd`
 
 all: 

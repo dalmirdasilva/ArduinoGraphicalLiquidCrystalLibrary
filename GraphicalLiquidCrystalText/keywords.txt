@@ -1,0 +1,23 @@
+#######################################
+# Syntax Coloring Map For GraphicalLiquidCrystalText
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+GraphicalLiquidCrystalText	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+setGraphicalLiquidCrystal	KEYWORD2
+setFont	KEYWORD2
+setGraphicState	KEYWORD2
+printChar	KEYWORD2
+printString	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################

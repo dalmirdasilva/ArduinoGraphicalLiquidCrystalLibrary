@@ -1,0 +1,21 @@
+#######################################
+# Syntax Coloring Map For GraphicalLiquidCrystalDrawer
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+GraphicalLiquidCrystalDrawer	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+drawLine    KEYWORD2
+drawRectangle   KEYWORD2
+drawCircle  KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
