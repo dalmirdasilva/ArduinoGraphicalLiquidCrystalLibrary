@@ -11,9 +11,9 @@
 #ifndef __ARDUINO_LIBRARY_GRAPHICAL_LIQUID_CRYSTAL_BITMAP_DRAWER_H__
 #define __ARDUINO_LIBRARY_GRAPHICAL_LIQUID_CRYSTAL_BITMAP_DRAWER_H__ 1
 
-#include <GraphicalLiquidCrystal.h>
 #include <GraphicalLiquidCrystalBitmapImage.h>
 #include <GraphicalLiquidCrystalPoint.h>
+#include <GraphicalLiquidCrystal.h>
 
 class GraphicalLiquidCrystalBitmapRender {
 

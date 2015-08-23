@@ -14,7 +14,6 @@
 #include <GraphicalLiquidCrystalGraphicState.h>
 #include <GraphicalLiquidCrystalPoint.h>
 #include <GraphicalLiquidCrystalRectangle.h>
-
 #include <GraphicalLiquidCrystal.h>
 
 class GraphicalLiquidCrystalDrawer {

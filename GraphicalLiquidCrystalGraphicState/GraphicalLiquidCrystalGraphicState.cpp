@@ -9,7 +9,7 @@
 #include <GraphicalLiquidCrystalGraphicState.h>
 
 GraphicalLiquidCrystalGraphicState::GraphicalLiquidCrystalGraphicState()
-        : linePattern(SOLID_LINE), fillPattern(SOLID_FILL), color(GraphicalLiquidCrystal::COLOR_BLACK), leading(1), space(1), fill(true) {
+        : linePattern(SOLID_LINE), fillPattern(SOLID_FILL), color(GraphicalLiquidCrystal::COLOR_WHITE), leading(1), space(1), fill(true) {
 }
 
 void GraphicalLiquidCrystalGraphicState::setFillPattern(FillPattern fillPattern) {

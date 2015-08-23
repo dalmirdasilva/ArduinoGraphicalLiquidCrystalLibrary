@@ -19,7 +19,7 @@ void GraphicalLiquidCrystalSimpleText::printChar(unsigned char x, unsigned char 
     unsigned char rows, column, glyphBuf[font->getGlyphLength()];
 
     // Convert pixel to row.
-    y /= (GRAPHICAL_LIQUID_CRYSTAL_HEIGHT / 8);
+    y /= (glcd->getHeight() / 8);
 
     // Read char data
     font->readGlyphData(glyphBuf, c);

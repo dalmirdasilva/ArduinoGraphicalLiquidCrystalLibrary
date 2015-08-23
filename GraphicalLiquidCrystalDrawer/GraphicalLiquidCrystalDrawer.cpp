@@ -104,13 +104,13 @@ void GraphicalLiquidCrystalDrawer::drawCircle(unsigned char x, unsigned char y, 
     // To fit the glcd screen
     if (x < radius) {
         x = radius;
-    } else if ((GRAPHICAL_LIQUID_CRYSTAL_WIDTH - 1 - x) < radius) {
-        x = GRAPHICAL_LIQUID_CRYSTAL_WIDTH - 1 - radius;
+    } else if ((glcd->getWidth() - 1 - x) < radius) {
+        x = glcd->getWidth() - 1 - radius;
     }
     if (y < radius) {
         y = radius;
-    } else if ((GRAPHICAL_LIQUID_CRYSTAL_HEIGHT - 1 - y) < radius) {
-        y = GRAPHICAL_LIQUID_CRYSTAL_HEIGHT - 1 - radius;
+    } else if ((glcd->getHeight() - 1 - y) < radius) {
+        y = glcd->getHeight() - 1 - radius;
     }
     do {
         if (graphicState->getFill()) {

@@ -11,13 +11,18 @@
 #ifndef __ARDUINO_LIBRARY_GRAPHICAL_LIQUID_CRYSTAL_TEXT_LINE_H__
 #define __ARDUINO_LIBRARY_GRAPHICAL_LIQUID_CRYSTAL_TEXT_LINE_H__ 1
 
-#include <GraphicalLiquidCrystal.h>
 #include <GraphicalLiquidCrystalText.h>
 #include <GraphicalLiquidCrystalDrawer.h>
+#include <GraphicalLiquidCrystal.h>
 
 class GraphicalLiquidCrystalTextLine {
 
 protected:
+
+    /**
+     * The glcd
+     */
+    GraphicalLiquidCrystal *glcd;
 
     /**
      * The glcd text
@@ -42,7 +47,7 @@ public:
      * @param glcdDrawer            The glcd drawer instance.
      * @param y                     The y position.
      */
-    GraphicalLiquidCrystalTextLine(GraphicalLiquidCrystalText *glcdText, GraphicalLiquidCrystalDrawer *glcdDrawer, unsigned char y);
+    GraphicalLiquidCrystalTextLine(GraphicalLiquidCrystal *glcd, GraphicalLiquidCrystalText *glcdText, GraphicalLiquidCrystalDrawer *glcdDrawer, unsigned char y);
 
     /**
      * Prints lines.

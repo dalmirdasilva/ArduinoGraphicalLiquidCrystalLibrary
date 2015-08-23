@@ -12,10 +12,10 @@
 #define __ARDUINO_LIBRARY_GRAPHICAL_LIQUID_CRYSTAL_SIMPLE_TEXT_H__ 1
 
 #include <GraphicalLiquidCrystalText.h>
-#include <GraphicalLiquidCrystal.h>
 #include <GraphicalLiquidCrystalBitmapFont.h>
 #include <GraphicalLiquidCrystalGraphicState.h>
 #include <GraphicalLiquidCrystalPoint.h>
+#include <GraphicalLiquidCrystal.h>
 
 class GraphicalLiquidCrystalSimpleText: public GraphicalLiquidCrystalText {
 

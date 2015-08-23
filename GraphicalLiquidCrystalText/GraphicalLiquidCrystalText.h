@@ -14,8 +14,8 @@
 #include <GraphicalLiquidCrystalGraphicState.h>
 #include <GraphicalLiquidCrystalPoint.h>
 #include <GraphicalLiquidCrystalRectangle.h>
-#include <GraphicalLiquidCrystal.h>
 #include <GraphicalLiquidCrystalBitmapFont.h>
+#include <GraphicalLiquidCrystal.h>
 
 class GraphicalLiquidCrystalText {
 

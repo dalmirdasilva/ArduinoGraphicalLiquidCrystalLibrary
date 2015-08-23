@@ -8,6 +8,7 @@
  * @author Dalmir da Silva <dalmirdasilva@gmail.com>
  */
 
+#include <Arduino.h>
 #include "GraphicalLiquidCrystalText.h"
 
 GraphicalLiquidCrystalText::GraphicalLiquidCrystalText(GraphicalLiquidCrystal *glcd, GraphicalLiquidCrystalBitmapFont *font, GraphicalLiquidCrystalGraphicState *graphicState)

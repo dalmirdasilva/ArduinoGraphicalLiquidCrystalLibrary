@@ -9,26 +9,31 @@
  */
 
 #include "GraphicalLiquidCrystalTextLine.h"
+#include <GraphicalLiquidCrystal.h>
+#include <GraphicalLiquidCrystalRectangle.h>
+#include <GraphicalLiquidCrystalText.h>
+#include <GraphicalLiquidCrystalDrawer.h>
 
-GraphicalLiquidCrystalTextLine::GraphicalLiquidCrystalTextLine(GraphicalLiquidCrystalText *glcdText, GraphicalLiquidCrystalDrawer *glcdDrawer, unsigned char y)
-        : glcdText(glcdText), glcdDrawer(glcdDrawer) {
-    this->y = y;
+GraphicalLiquidCrystalTextLine::GraphicalLiquidCrystalTextLine(GraphicalLiquidCrystal *glcd, GraphicalLiquidCrystalText *glcdText, GraphicalLiquidCrystalDrawer *glcdDrawer, unsigned char y)
+        : glcd(glcd), glcdText(glcdText), glcdDrawer(glcdDrawer), y(y) {
 }
 
 void GraphicalLiquidCrystalTextLine::printLines(const unsigned char *text, unsigned char count) {
-    unsigned char realCharacterHeight, index = 0;
+    unsigned char realCharacterHeight, index = 0, width, height;
+    width = glcd->getWidth();
+    height = glcd->getHeight();
     realCharacterHeight = glcdText->getFont()->getCharacterHeight() + glcdText->getGraphicState()->getLeading();
-    GraphicalLiquidCrystalRectangle area(0, (y & (GRAPHICAL_LIQUID_CRYSTAL_HEIGHT - 1)), GRAPHICAL_LIQUID_CRYSTAL_WIDTH - 1, ((y + realCharacterHeight) & (GRAPHICAL_LIQUID_CRYSTAL_HEIGHT - 1)));
+    GraphicalLiquidCrystalRectangle area(0, (y & (height - 1)), width - 1, ((y + realCharacterHeight) & (height - 1)));
     while (1) {
         unsigned char printed;
         printed = glcdText->printString(&area, &text[index], count);
         if (printed == 0) {
             break;
         }
-        area.setBottom((area.getBottom() + realCharacterHeight) & (GRAPHICAL_LIQUID_CRYSTAL_HEIGHT - 1));
-        area.setTop((area.getTop() + realCharacterHeight) & (GRAPHICAL_LIQUID_CRYSTAL_HEIGHT - 1));
+        area.setBottom((area.getBottom() + realCharacterHeight) & (height - 1));
+        area.setTop((area.getTop() + realCharacterHeight) & (height - 1));
         y += realCharacterHeight;
-        glcdText->getGraphicalLiquidCrystal()->scroll(GraphicalLiquidCrystal::CHIP_ALL, GraphicalLiquidCrystal::SCROLL_UP, realCharacterHeight);
+        glcd->scroll(GraphicalLiquidCrystal::SCROLL_UP, realCharacterHeight);
         index += printed;
     }
 }
