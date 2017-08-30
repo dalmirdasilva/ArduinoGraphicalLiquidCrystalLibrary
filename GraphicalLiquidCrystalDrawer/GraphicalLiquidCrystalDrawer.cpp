@@ -9,6 +9,7 @@
  */
 
 #include "GraphicalLiquidCrystalDrawer.h"
+#include <Arduino.h>
 
 GraphicalLiquidCrystalDrawer::GraphicalLiquidCrystalDrawer(GraphicalLiquidCrystal *glcd, GraphicalLiquidCrystalGraphicState *graphicState)
         : glcd(glcd), graphicState(graphicState) {
@@ -101,7 +102,7 @@ void GraphicalLiquidCrystalDrawer::drawCircle(unsigned char x, unsigned char y, 
     unsigned char a = 0;
     unsigned char b = radius;
 
-    // To fit the glcd screen
+    // To fit the GLCS screen
     if (x < radius) {
         x = radius;
     } else if ((glcd->getWidth() - 1 - x) < radius) {

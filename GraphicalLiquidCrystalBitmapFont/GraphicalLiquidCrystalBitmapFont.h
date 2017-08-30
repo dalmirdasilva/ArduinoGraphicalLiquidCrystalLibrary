@@ -147,7 +147,7 @@
  *         +-+-+-+-+-+-+-+-+-+-+-+-+       +-+-+-+-+-+-+-+-+-+-+-+-+
  * </pre>
  * 
- * The first 10 bytes are the top part of the character, and the las 10 bytes are
+ * The first 10 bytes are the top part of the character, and the last 10 bytes are
  * the bottom part of the character.
  * 
  * @author Dalmir da Silva <dalmirdasilva@gmail.com>

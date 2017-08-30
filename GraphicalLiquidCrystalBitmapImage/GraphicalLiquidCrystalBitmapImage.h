@@ -93,7 +93,7 @@
  * 
  * Image example
  * 
- * Here a example os a image with 8x16 (smile face):
+ * Here is an example of an image with 8x16 (smile face):
  * 
  * <pre>
  * 0x00, 0x08, 0x10,

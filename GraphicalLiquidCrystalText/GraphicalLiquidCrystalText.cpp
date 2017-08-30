@@ -109,7 +109,7 @@ unsigned char GraphicalLiquidCrystalText::printString(unsigned char left, unsign
             break;
         }
 
-        // Print he char
+        // Print the char
         printChar(x, y, text[i], size);
 
         // Move the x position to the next char
